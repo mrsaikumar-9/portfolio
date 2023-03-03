@@ -1,0 +1,236 @@
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com"
+    crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+</head>
+<body>
+
+    <div class="hero">
+        <!-- <nav>
+            <ul>
+                <h2 class="logo">Portfo<span>lio</span></h2>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Me</a></li>
+            </ul>
+        </nav> -->
+
+        <header>
+            <div class="logo">Portfo<span>lio</span></div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+             </div>
+
+            <nav class="nav-bar">
+                <ul>
+                    <li><a class="active" href="#">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#Footer">Contact Me</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="letme">Let me Help <span>You...</span></div>
+        <div class="content">
+            <h4>Hello, My name is </h4>
+            <h1><span>S</span>ai <span> K</span>umar</h1>
+            <h3>I'm an Upcoming <span>Designer</span></h3>
+    
+            <div class="newsletter">
+                {% block content %}
+                <form method="post" action="">
+                    
+                    <input type="text" name="Mail" id="MailId" placeholder="enter your email">
+                    {% csrf_token %}
+                    <input type="submit" name="submit" value="Lets Start">
+                    
+                </form>
+                {% endblock%}
+    
+            </div>
+    
+        </div>
+    </div>
+
+  <!-- about section start -->
+    <div id="about" class="about">
+        <div class="main">
+            <h2>About Me</h2>
+            <h5>Java <span>Developer</span> and designer</h5>
+            <div class="about_text">
+                
+                <p>
+                    <img class="saikumar_img" src="{% static 'home/img/saikumar1.jpg' %}" alt="image not available">
+                    <br>
+
+                    I am a upcoming graduate from Sree Vidyanikethan Engineering College,Tirupati and my core is Electronics and Communication Engineering . I am good at coding,analyzing and problem-solving . I have relevant knowledge of DataStructures, Algorithms.I am dynamic person and always wanted to explore new things and i believe on hard work and my mind is always full of positive vibes. I have intrest in how things are working and look situations in different way.If you are searching for a developer then you had landed at a right place.
+                </p>
+            </div>
+
+            
+
+        </div>
+
+    </div>
+    <!-- Projects section -->
+
+    <div id="projects" class="projects">
+        <h2>Projects</h2>
+
+        <div class="item">
+            <div class="child">
+                <h3>Gesture Controlled Presentation</h3>
+                <p>
+                    The research has tried to control different operations of the PowerPoint slideshow through gestures. This research has used Machine Learning to detect gestures with subtle differences and tried to map them with some fundamental PowerPoint slideshow controlling functions using Python. This project make the work of the presenter quite easy.    
+                </p>
+                <div class="button"><a href="https://github.com/mrsaikumar-7/computervision">Open Project</a></div>
+
+            </div>
+            <div class="child">
+                <h3>College Maintainance System</h3>
+                <p >
+                    This Website is used to manage the sudents and faculty data.
+                    LIbrary : This also inlcudes the fecilities like library management that track the books taken and submitted by the students.
+                    This can summarise the details of library activities and due amount for the late submission.
+                </p>
+                <div class="button"><a href="https://github.com/mrsaikumar-7/StudentManagementSystem">Open Project</a></div>
+
+            </div>
+
+            
+            <div class="child">
+                <h3>React CRUD Operations</h3>
+                <p>
+                This Project is about perfoming the CRUD operations in reactjs.
+                Here we used the node js as backend
+                </p>
+                <div class="button"><a href="https://github.com/mrsaikumar-7/react-crud-with-nodejs">Open Project</a></div>
+            </div>  
+        </div>
+
+    </div>
+
+    <div id="skills" class="skills">
+        <h1 class="heading">Skills</h1>
+
+        <div class="grid-skill">
+            <div class="grid-item">
+                <h2><span>P</span>ython</h2>
+                <h3>★★★★☆</h3>
+            </div>
+            <div class="grid-item">
+                <h2><span>M</span>achine <span>L</span>earning</h2>
+                <h3>★★★★☆</h3>
+            </div>
+            <div class="grid-item">
+                <h2><span>D</span>ata <span>S</span>tructure</h2>
+                <h3>★★★★☆</h3>
+            </div>
+
+            <div class="grid-item">
+                <h2><span>A</span>lgroithms</h2>
+                <h3>★★★☆☆</h3>
+            </div>
+            <div class="grid-item">
+                <h2><span>J</span>ava <span>S</span>cript</h2>
+                <h3>★★★★☆</h3>
+            </div>
+            <div class="grid-item">
+                <h2> <span>C</span> Programming</h2>
+                <h3>★★★★☆</h3>
+            </div>
+            <div class="grid-item">
+                <h2><span>M</span>ysql</h2>
+                <h3>★★★★☆</h3>
+            </div>
+
+            <div class="grid-item">
+                <h2><span>A</span>lgroithms</h2>
+                <h3>★★★☆☆</h3>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Education details -->
+    <div class="education">
+        <h1>Education</h1>
+        <div class="level">
+
+            <h2>Sree Vidyanikethan Engineering College</h2>
+            <h4>B Tech | Electronics and Communication</h4>
+            <h3>JAN-2021 TO PRESENT | BACHELOR OF TECHNOLOGY</h3>
+            <h3>CGPA: 9.18/10.0</h3>
+        </div>
+
+        <div class="level">
+            <h2>A.P.R. JR COLLEGE</h2>
+            <h4>INTERMEDIATE</h4>
+            <h3>APR-2018 TO MARCH-2020 |INTERMEDIATE</h3>
+            <h3>GPA: 9.50/10.0</h3>
+
+        </div>
+        <div class="level">
+            <h2>MOURYA HIGH SCHOOL</h2>
+            <h4>SSC</h4>
+            <h3>MARCH-2018 |SSC</h3>
+            <h3>GPA: 9.8/10.0</h3>
+        </div>
+    </div>
+
+    
+    <div id="Footer" class="footer">
+        
+        <div class="social-links">
+            <ul>
+                <li class="social-icons"><a href="https://www.instagram.com/mrsaikumar_________9/"><i class="fa-brands fa-instagram"></i></a></li>
+                <li class="social-icons"><a href="https://www.facebook.com/profile.php?id=100057530707742"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li class="social-icons"><a href="https://twitter.com/mrsaikumar_7"><i class="fa-brands fa-twitter"></i></a></li>
+                <li class="social-icons"><a href="https://www.linkedin.com/in/sai-kumar-yadav-pappaka-778928222/"><i class="fa-brands fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+        <div class="quick-links">
+            <ul>
+            
+                <li class="quick-items"><a href="#">Home</a></li>
+                <li class="quick-items"><a href="#">Skills</a></li>
+                <li class="quick-items"><a href="#">Services</a></li>
+                <li class="quick-items"><a href="#">About Us</a></li>
+                <li class="quick-items"><a href="#">Contact Me</a></li>
+
+            </ul>
+        </div>
+
+        
+        <div class="outer-footer">
+            Copyright &copy;mrsaikumar. All rights reserved
+        </div>
+    </div>
+
+
+    <script>
+        hamburger = document.querySelector(".hamburger")
+        hamburger.onclick = function(){
+            navBar =document.querySelector(".nav-bar");
+            navBar.classList.toggle("active")
+            <!-- alert('the menu bar is active') -->
+        } 
+    </script>
+    <script src="https://kit.fontawesome.com/55808b3e2a.js" crossorigin="anonymous"></script>
+</body>
+</html>
