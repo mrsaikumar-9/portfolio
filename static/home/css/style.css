@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+  }
 *{
     padding: 0;
     margin: 0;
@@ -12,7 +15,6 @@ body{
 .hero{
 
     height: 100vh;
-    width: fit-content;
     background-image: url( ../img/background_img.jpg );
     background-size:cover;
     opacity: 0.82;
@@ -466,9 +468,11 @@ span{
 .projects .item .button{
 
     text-align: center;
-    margin-left: 70%;
-    margin-right: 5%;
+    width: fit-content;
+    align-self: end;
+    padding: 1%;
     position:relative;
+    margin-right: 4%;
     
     border: 2px solid #f9004d;
     font-weight: bold;
