@@ -39,7 +39,7 @@
                     <li><a class="active" href="#">Home</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#about">About Me</a></li>
                     <li><a href="#resume">My Resume</a></li>
                 </ul>
             </nav>
@@ -59,9 +59,9 @@
         {% block content %}
         <form method="post" action="">
             
-            <input type="text" name="Mail" id="MailId" placeholder="enter your email">
+            <input id="mailInput" type="text" name="Mail" id="MailId" placeholder="enter your email">
             {% csrf_token %}
-            <input type="submit" name="submit" value="Lets Start">
+            <input onclick="document.getElementById('mailInput').value = ''" type="submit" name="submit" value="Lets Start">
             
         </form>
         {% endblock%}
@@ -135,6 +135,10 @@
                 <h3>★★★★☆</h3>
             </div>
             <div class="grid-item">
+                <h2><span>J</span>ava</h2>
+                <h3>★★★★☆</h3>
+            </div>
+            <div class="grid-item">
                 <h2><span>M</span>achine <span>L</span>earning</h2>
                 <h3>★★★★☆</h3>
             </div>
@@ -198,7 +202,7 @@
     <div id="resume" class="resume_cont">
         <h1>Resume</h1>
         <img class="resume_img" src="{% static 'home/img/Resume_psk.jpg' %}" alt="resume loading">
-        <div class="button"><a href="https://drive.google.com/file/d/1pFTSmt8WAaxsJf1Fxu2KIZebe2OCVu0u/view?usp=sharing">Download</a></div>
+        <div class="button"><a href="https://drive.google.com/file/d/1Gu1IUhZPY5uQfArqGLrKzGfjG7piY-3X/view?usp=sharing">Download</a></div>
     </div>
 
     <!-- RESUME END -->
@@ -239,6 +243,9 @@
             navBar.classList.toggle("active")
             <!-- alert('the menu bar is active') -->
         } 
+    
+
+
     </script>
     <script src="https://kit.fontawesome.com/55808b3e2a.js" crossorigin="anonymous"></script>
 </body>
